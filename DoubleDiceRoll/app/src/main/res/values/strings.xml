@@ -3,4 +3,6 @@
     <string name="dice_1">Dice 1</string>
     <string name="dice_2">Dice 2</string>
     <string name="roll">Roll</string>
+    <string name="dice1Image">TODO</string>
+    <string name="dice2Image">TODO</string>
 </resources>

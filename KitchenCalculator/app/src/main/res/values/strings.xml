@@ -1,3 +1,9 @@
 <resources>
-    <string name="app_name">Kitchen Calculator</string>
+    <string name="app_name">KitchenCalculator</string>
+    <string name="convert_the_unit">Convert the unit</string>
+    <string name="what_conversion_you_want_to_do">What conversion you want to do?</string>
+    <string name="millilitres_to_fluid_ounces">Millilitres to Fluid Ounces</string>
+    <string name="fluid_ounces_to_millilitres">Fluid Ounces to Millilitres</string>
+    <string name="grams_to_cups">Grams to Cups</string>
+    <string name="cups_to_grams">Cups to Grams</string>
 </resources>

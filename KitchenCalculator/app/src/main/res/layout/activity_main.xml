@@ -4,15 +4,88 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="16dp"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+    <EditText
+        android:id="@+id/conversion_number"
+        android:layout_width="160dp"
+        android:layout_height="48dp"
+        android:hint="@string/convert_the_unit"
+        android:importantForAutofill="no"
+        android:inputType="numberDecimal"
+        android:textColorHint="@color/black"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/conversion_question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/what_conversion_you_want_to_do"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/conversion_number" />
+
+
+    <RadioGroup
+        android:id="@+id/conversion_options"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checkedButton="@id/millilitres_ounces"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/conversion_question">
+
+        <RadioButton
+            android:id="@+id/millilitres_ounces"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/millilitres_to_fluid_ounces" />
+
+        <RadioButton
+            android:id="@+id/ounces_millilitres"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fluid_ounces_to_millilitres" />
+
+        <RadioButton
+            android:id="@+id/grams_cups"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/grams_to_cups" />
+
+        <RadioButton
+            android:id="@+id/cups_grams"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cups_to_grams" />
+    </RadioGroup>
+
+    <Switch
+        android:id="@+id/round_up_switch"
+        android:layout_width="320dp"
+        android:layout_height="48dp"
+        android:checked="true"
+        android:text="Round up conversion?"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/conversion_options"
+        app:layout_constraintTop_toBottomOf="@id/conversion_options" />
+
+    <Button
+        android:id="@+id/calculate_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Calculate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/round_up_switch" />
+
+    <TextView
+        android:id="@+id/conversion_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Conversion Amount"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/calculate_button" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
